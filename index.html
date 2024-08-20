@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="date=no">
+    <meta name="format-detection" content="address=no">
+    <meta name="format-detection" content="email=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>Сервис аналитики Е-Металл</title>
+
+    <link rel="stylesheet" id="emetall-style-min-css" href="https://e-metall.ru/wp-content/themes/emetall/css/style.min.css?ver=1707279480" media="all">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="stat">
+    <header>
+        <div class="container_1208">
+            <div class="header__wrapper">
+                <a href="#" class="stat-logo" aria-current="page">
+                    <img src="img/stat-logo.svg" alt="логотип Е-Металл">
+                </a>
+                <button type="button" class="btn btn-stat-help">Помощь с сайтом</button>
+                <button type="button" class="btn-out">Выйти</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="stat-promo">
+            <div class="container_1208">
+                <div class="stat-promo__wrap">
+                    <div class="stat-promo__content">
+                        <h1 class="fs_24 lh_norm fw_600 mb_13">Сервис аналитики Е-Металл</h1>
+                        <p class="fs_14 lh_157">Данные о наличии металла с помощью специальной программы регулярно обновляются и отображаются в единой таблице поиска с удобными фильтрами и сортировкой.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="stat-prompts">
+            <div class="container_1208">
+                <div class="stat-prompts__wrapper">
+                    <div class="stat-prompts__item">
+                        <p class="fs_16 fw_600 lh_niormal mb_8">Как искать по ОКПД2?</p>
+                        <p class="p fs_14 lh_157 mb_20">Здесь какая-то подсказка по сервису, чтобы сразу ввести в курс дела.</p>
+                        <button type="button" class="stat-prompts__hide">Скрыть</button>
+                    </div>
+                    <div class="stat-prompts__item">
+                        <p class="fs_16 fw_600 lh_niormal mb_8">Поиск по позиции</p>
+                        <p class="p fs_14 lh_157 mb_20">Здесь какая-то подсказка по сервису, чтобы сразу ввести в курс дела.</p>
+                        <button type="button" class="stat-prompts__hide">Скрыть</button>
+                    </div>
+                    <div class="stat-prompts__item">
+                        <p class="fs_16 fw_600 lh_niormal mb_8">Анализ цены</p>
+                        <p class="p fs_14 lh_157 mb_20">Здесь какая-то подсказка по сервису, чтобы сразу ввести в курс дела.</p>
+                        <button type="button" class="stat-prompts__hide">Скрыть</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="stat-search">
+            <div class="container_1208">
+                <div class="stat-search__wrap">
+                    <h2 class="stat-search__title">
+                        Поиск
+                    </h2>
+                    <div class="wrapper_start mb_40 profile__choise">
+                        <div class="radio__tabs">
+                            <label>
+                                <input type="radio" name="period">
+                                <span class="radio__mark">Сегодня</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="period">
+                                <span class="radio__mark">Вчера</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="period">
+                                <span class="radio__mark">Неделя</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="period">
+                                <span class="radio__mark">Месяц</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="period">
+                                <span class="radio__mark">Квартал</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="period">
+                                <span class="radio__mark">Год</span>
+                            </label>
+                        </div>
+                        <div class="mobile profile__stat__select">
+                            <div class="select"><select class="select_main" style="display: none;">
+                                <option value="Сегодня">Сегодня</option>
+                                <option value="Вчера">Вчера</option>
+                                <option value="Неделя">Неделя</option>
+                                <option value="Месяц">Месяц</option>
+                                <option value="Квартал">Квартал</option>
+                                <option value="Год">Год</option>
+                            </select><div class="new-select">Сегодня</div><div class="new-select__list" style="display: none;"><div class="new-select__item" data-value="Вчера"><span>Вчера</span></div><div class="new-select__item" data-value="Неделя"><span>Неделя</span></div><div class="new-select__item" data-value="Месяц"><span>Месяц</span></div><div class="new-select__item" data-value="Квартал"><span>Квартал</span></div><div class="new-select__item" data-value="Год"><span>Год</span></div></div></div>
+                        </div>
+                        <label class="search__calend__wrap">
+                            <input type="text" class="form__input search__calend textColor" id="calend" value="31 авг – 30 сен 2022" readonly="true">
+                        </label>
+                        <a href="#" class="btn btn_black">Показать</a>
+                    </div>
+                    <div class="stat-search__date">
+                        <div class="stat-search__date__top">
+                            <p class="fs_20 lh_norm mb_16 fw_600">Поиск данных по ОКПД2</p>
+                            <form action="#" class="stat-search__form1">
+                                <input type="text" class="form__input stat-search__form__input" placeholder="Код или наименование">
+                                <button type="submit" class="btn btn_black">Найти</button>
+                            </form>
+                        </div>
+                        <div class="stat-search__date__bottom">
+                            <label for="more-search" class="stat-search__more">Расширенный поиск по позиции</label>
+                            <input type="checkbox" id="more-search"></input>
+                            <form action="#" class="stat-search__date__more">
+                                <div>
+                                    <label for="chapter" class="label">Раздел</label>
+                                
+                                <select name="chapter" id="chapter" class="form__input select_main">
+                                    <option value="" selected disabled></option>
+                                    <option value="Арматура">Арматура</option>
+                                    <option value="Балка">Балка</option>
+                                    <option value="Баллоны">Баллоны</option>
+                                    <option value="Дробь">Дробь</option>
+                                    <option value="Заглушки">Заглушки</option>
+                                    <option value="Задвижки">Задвижки</option>
+                                    <option value="Катанка">Катанка</option>
+                                    <option value="Квадрат">Квадрат</option>
+                                    <option value="Краны шаровые">Краны шаровые</option>
+                                    <option value="Круг">Круг</option>
+                                    <option value="Лента и штрипс">Лента и штрипс</option>
+                                    <option value="Лист">Лист</option>
+                                    <option value="Металло-черепица">Металло-черепица</option>
+                                    <option value="Отводы">Отводы</option>
+                                    <option value="Переходы">Переходы</option>
+                                    <option value="Поковка">Поковка</option>
+                                    <option value="Полоса">Полоса</option>
+                                    <option value="Проволока">Проволока</option>
+                                    <option value="Профнастил">Профнастил</option>
+                                    <option value="Рельсы">Рельсы</option>
+                                    <option value="Рулоны">Рулоны</option>
+                                    <option value="Сетка">Сетка</option>
+                                    <option value="Слитки">Слитки</option>
+                                    <option value="Сэндвич-панели">Сэндвич-панели</option>
+                                    <option value="Тройники">Тройники</option>
+                                    <option value="Труба">Труба</option>
+                                    <option value="Уголок">Уголок</option>
+                                    <option value="Фланцы">Фланцы</option>
+                                    <option value="Чушки">Чушки</option>
+                                    <option value="Швеллер">Швеллер</option>
+                                    <option value="Шестигранник">Шестигранник</option>
+                                    <option value="Шина">Шина</option>
+                                    <option value="Электроды">Электроды</option>
+        
+                                </select>
+                                </div>
+                              
+                                <div>
+                                    <label for="chapter2" class="label">Подраздел</label>
+                                
+                                    <select name="chapter2" id="chapter2" class="form__input select select_main">
+                                        <option value="" selected disabled></option>
+                                        <option value="Арматура1">Арматура1</option>
+                                        <option value="Арматура2">Арматура2</option>
+                                        <option value="Арматура3">Арматура3</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="chapter2" class="label">Подраздел</label>
+                                
+                                    <select name="chapter2" id="chapter2" class="form__input select select_main">
+                                        <option value="" selected disabled></option>
+                                        <option value="Арматура1">Арматура1</option>
+                                        <option value="Арматура2">Арматура2</option>
+                                        <option value="Арматура3">Арматура3</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="chapter2" class="label">Подраздел</label>
+                                
+                                    <select name="chapter2" id="chapter2" class="form__input select select_main">
+                                        <option value="" selected disabled></option>
+                                        <option value="Арматура1">Арматура1</option>
+                                        <option value="Арматура2">Арматура2</option>
+                                        <option value="Арматура3">Арматура3</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="chapter2" class="label">Подраздел</label>
+                                
+                                    <select name="chapter2" id="chapter2" class="form__input select select_main">
+                                        <option value="" selected disabled></option>
+                                        <option value="Арматура1">Арматура1</option>
+                                        <option value="Арматура2">Арматура2</option>
+                                        <option value="Арматура3">Арматура3</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="chapter2" class="label">Подраздел</label>
+                                
+                                    <select name="chapter2" id="chapter2" class="form__input select select_main">
+                                        <option value="" selected disabled></option>
+                                        <option value="Арматура1">Арматура1</option>
+                                        <option value="Арматура2">Арматура2</option>
+                                        <option value="Арматура3">Арматура3</option>
+                                    </select>
+                                </div>
+                                <button class="btn" type="submit">Сформировать аналитику</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="stat-result">
+            <div class="container">
+                <div class="stat-result__wrap">
+                    <div class="stat-result__top">
+                        <p class="fs_20 fw_600 lh_norm">Результаты по ОКПД2 <output>24.42.26</output></p>
+                        <p class="fs_20 fw_600 lh_norm" style="color: #6c757d;">Трубы или трубки из алюминия</p>
+                    </div>
+                    <div class="stat-result__bottom">
+                        <div class="stat-result__bottom__item">
+                            <p class="stat-result__bottom__title">ЗАЯВЛЕННОЕ НАЛИЧИЕ</p>
+                            <p class="stat-result__bottom__text">637 299 кг</p>
+                        </div>
+                        <div class="stat-result__bottom__item">
+                            <p class="stat-result__bottom__title">ВСЕГО ПОЗИЦИЙ</p>
+                            <p class="stat-result__bottom__text">810</p>
+                        </div>
+                        <div class="stat-result__bottom__item">
+                            <p class="stat-result__bottom__title">КОЛИЧЕСТВО ПОСТАВЩИКОВ</p>
+                            <p class="stat-result__bottom__text">12</p>
+                        </div>
+                        <div class="stat-result__bottom__item">
+                            <p class="stat-result__bottom__title">МЕТАЛЛОБАЗ</p>
+                            <p class="stat-result__bottom__text">11</p>
+                        </div>
+                        <div class="stat-result__bottom__item">
+                            <p class="stat-result__bottom__title">ПРОИЗВОДИТЕЛЕЙ</p>
+                            <p class="stat-result__bottom__text">1</p>
+                        </div>
+                        <div class="stat-result__bottom__item">
+                            <p class="stat-result__bottom__title">СРЕДНЯЯ ЦЕНА</p>
+                            <p class="stat-result__bottom__text">885 руб/кг</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="stat-list">
+            <div class="container">
+                <div class="stat-list__wrap">
+                    <h2 class="stat-list__title">
+                        Поставщики анализируемой продукции
+                    </h2>
+                   <div class="stat-list__table">
+                    <table>
+                        <thead>
+                            <th>Поставщик</th>
+                            <th>Количество позиций</th>
+                            <th>Наличие</th>
+                            <th>Средняя цена</th>
+                            <th>Город</th>
+                        </thead>
+                        <tbody>
+                           
+                            <tr>
+                                <td>
+                                    <span class="name-base">
+                                        КУМЗ
+                                        <img src="img/base-logo.svg" alt="КУМЗ логотип">
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="blue-bottom">
+                                        37 позиций
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="blue-bottom">
+                                        11 671 кг
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="blue-bottom">
+                                        560 руб/кг
+                                    </span>
+                                </td>
+                                <td>
+                                    Каменск-Уральский
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="name-base">
+                                        Главбаза
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="blue-bottom">
+                                        37 позиций
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="blue-bottom">
+                                        11 671 кг
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="blue-bottom">
+                                        560 руб/кг
+                                    </span>
+                                </td>
+                                <td>
+                                    Ижевск
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="name-base">
+                                        Сплав 31
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="blue-bottom">
+                                        86 позиций
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="blue-bottom">
+                                        44 595 кг
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="blue-bottom">
+                                        476 руб/кг
+                                    </span>
+                                </td>
+                                <td>
+                                    Екатеринбург
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="name-base">
+                                        Ростехком
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="blue-bottom">
+                                        294 позиции
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="blue-bottom">
+                                        167 085 кг
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="blue-bottom">
+                                        2 600 руб/кг
+                                    </span>
+                                </td>
+                                <td>
+                                    Екатеринбург
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="name-base">
+                                        КУМЗ
+                                        <img src="img/base-logo.svg" alt="КУМЗ логотип">
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="blue-bottom">
+                                        37 позиций
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="blue-bottom">
+                                        11 671 кг
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="blue-bottom">
+                                        560 руб/кг
+                                    </span>
+                                </td>
+                                <td>
+                                    Каменск-Уральский
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="name-base">
+                                        Главбаза
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="blue-bottom">
+                                        37 позиций
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="blue-bottom">
+                                        11 671 кг
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="blue-bottom">
+                                        560 руб/кг
+                                    </span>
+                                </td>
+                                <td>
+                                    Ижевск
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="name-base">
+                                        Сплав 31
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="blue-bottom">
+                                        86 позиций
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="blue-bottom">
+                                        44 595 кг
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="blue-bottom">
+                                        476 руб/кг
+                                    </span>
+                                </td>
+                                <td>
+                                    Екатеринбург
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span class="name-base">
+                                        Ростехком
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="blue-bottom">
+                                        294 позиции
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="blue-bottom">
+                                        167 085 кг
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="blue-bottom">
+                                        2 600 руб/кг
+                                    </span>
+                                </td>
+                                <td>
+                                    Екатеринбург
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                   </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
