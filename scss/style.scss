@@ -377,5 +377,17 @@
                 }
             }
         }
+        &__chart {
+            padding: 48px;
+        }
+    }
+    //графики
+    &-chart {
+        &__legend {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 21px;
+        }
     }
 }

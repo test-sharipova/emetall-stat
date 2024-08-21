@@ -137,4 +137,39 @@ ymaps.ready(function () {
         .add(myPlacemark)
         .add(myPlacemark2);
   });
+
+
+  //chart график 1
+  const ctx = document.getElementById('myChart');
+
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь', 'Январь'],
+      datasets: [{
+        label: '',
+        data: [17000, 15500, 16200, 17100, 18500, 17600],
+        borderWidth: 2,
+        tension: 0.5,
+        borderColor: '#2764e0',
+        pointRadius: 4,
+        pointBorderWidth: 6,
+        pointBackgroundColor: '#fff'
+      }]
+    },
+    options: {
+        
+      scales: {
+        y: {
+        //   beginAtZero: false,
+          ticks: {
+            stepSize: 500,
+            // min: 15000,
+            // max: 19000
+            
+          }
+        }
+      }
+    }
+  });
     
