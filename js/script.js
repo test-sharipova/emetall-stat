@@ -138,6 +138,15 @@ ymaps.ready(function () {
         .add(myPlacemark2);
   });
 
+//modal
+$('.stat-list .avial').on('click', function(){
+    $('.stat-modal').fadeIn();
+    $('.overlay').fadeIn();
+});
+$('.modal__close').on('click', function(){
+    $('.stat-modal').fadeOut();
+    $('.overlay').fadeOut();
+});
 
   //chart график 1
   const ctx = document.getElementById('myChart');
@@ -172,4 +181,221 @@ ymaps.ready(function () {
       }
     }
   });
-    
+
+  //chart график 2
+  const ctx2 = document.getElementById('myChart2').getContext('2d');
+
+  new Chart(ctx2, {
+    type: 'bar',
+    data: {
+        labels: ['Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь', 'Январь'], // Месяцы
+        datasets: [
+            {
+                label: 'Запросы в неделю',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: '#2764e0',
+                // borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1,
+                barPercentage: 0.4, // Уменьшаем ширину столбиков
+                categoryPercentage: 0.5 // Уменьшаем петли между группами столбиков
+            },
+            {
+                label: 'Переходы в неделю',
+                data: [2, 3, 20, 5, 1, 4],
+                backgroundColor: '#7aa6ff',
+                // borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1,
+                barPercentage: 0.4, 
+                categoryPercentage: 0.5 
+            },
+            
+        ]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                display: false // Убираем легенду
+            }
+        },
+        scales: {
+            y: {
+                stacked: true, // Накладываем по оси Y
+                beginAtZero: true
+            },
+            x: {
+                stacked: true // Накладываем по оси X
+            }
+        }
+    }
+  });
+
+  //chart график 3
+  const ctx3 = document.getElementById('myChart3').getContext('2d');
+
+  new Chart(ctx3, {
+    type: 'line',
+    data: {
+        labels: ['Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь', 'Январь'], // Месяцы
+        datasets: [
+            {
+                label: 'Запросы в неделю',
+                data: [17000, 15500, 16200, 17100, 18500, 17600],
+                // backgroundColor: '#2764e0',
+                borderColor: '#c90000',
+                borderWidth: 2,
+                barPercentage: 0.4, // Уменьшаем ширину столбиков
+                tension: 0.5,
+                categoryPercentage: 0.5 // Уменьшаем петли между группами столбиков
+            },
+            {
+                label: 'Переходы в неделю',
+                data: [17500, 16000, 16700, 18100, 19500, 18600],
+                // backgroundColor: '#7aa6ff',
+                borderColor: '#b9c900',
+                borderWidth: 2,
+                barPercentage: 0.4, 
+                tension: 0.5,
+                categoryPercentage: 0.5 
+            },
+            
+        ]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                display: false // Убираем легенду
+            }
+        },
+        scales: {
+            y: {
+                
+                
+                ticks: {
+                    stepSize: 500,
+                    
+                    
+                  }
+            },
+            
+        }
+    }
+  });
+
+  //chart график 4
+  const ctx5 = document.getElementById('myChart5').getContext('2d');
+  const myDoughnutChart = new Chart(ctx5, {
+      type: 'doughnut',
+      data: {
+          labels: ['20', '09Г2С', '30ХГСА', '12Х1МФ', '40Х', '20', '09Г2С', '30ХГСА', '12Х1МФ', '40Х'],
+          datasets: [{
+              label: 'Мои данные',
+              data: [16, 17, 14, 13, 9, 8, 8, 7, 5, 2],
+              borderRadius: 10,
+              backgroundColor: [
+                  '#297ee4',
+                  '#fa6b6b',
+                  '#fa993f',
+                  '#fcdd3b',
+                  '#717de8',
+                  '#7ee4bf',
+                  '#e386e5',
+                  '#913ffa',
+                  '#a5d837',
+                  '#f46d6d'
+              ],
+              
+              
+          }]
+      },
+      options: {
+          responsive: true,
+          cutout: 155,
+          maintainAspectRatio: false, // Позволяет задать размеры, указанные в атрибутах width и height
+          
+          plugins: {
+            legend: {
+                position: 'right', // Размещаем легенду справа
+                display: false,
+                labels: {
+                    pointStyle: 'circle', // Стиль маркера в легенде
+                    usePointStyle: true // Используем стиль маркера для точек
+                }
+            },
+              tooltip: {
+                  callbacks: {
+                      label: function(tooltipItem) {
+                          return `${tooltipItem.label}: ${tooltipItem.parsed}`;
+                      }
+                  }
+              }
+          }
+      }
+  });
+
+  //chart график в модалке
+  const ctx6 = document.getElementById('myChart6').getContext('2d');
+
+  new Chart(ctx6, {
+    type: 'bar',
+    data: {
+        labels: ['Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь', 'Январь'], // Месяцы
+        datasets: [
+            {
+                label: '1 неделя',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: '#1a913c',
+                // borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1,
+                barPercentage: 0.9, // Уменьшаем ширину столбиков
+                categoryPercentage: 0.5 // Уменьшаем петли между группами столбиков
+            },
+            {
+                label: '2 неделя',
+                data: [2, 3, 20, 5, 1, 4],
+                backgroundColor: '#1a913c',
+                // borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1,
+                barPercentage: 0.9, 
+                categoryPercentage: 0.5 
+            },
+            {
+                label: '3 неделя',
+                data: [2, 3, 20, 5, 1, 4],
+                backgroundColor: '#1a913c',
+                // borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1,
+                barPercentage: 0.9, 
+                categoryPercentage: 0.5 
+            },
+            {
+                label: '4 неделя',
+                data: [5, 7, 28, 8, 5, 4],
+                backgroundColor: '#1a913c',
+                // borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1,
+                barPercentage: 0.9, 
+                categoryPercentage: 0.5 
+            },
+            
+        ]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                display: false // Убираем легенду
+            }
+        },
+        scales: {
+            y: {
+                stacked: false, // Накладываем по оси Y
+                beginAtZero: true
+            },
+            x: {
+                stacked: false // Накладываем по оси X
+            }
+        }
+    }
+  });
