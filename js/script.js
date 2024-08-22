@@ -167,18 +167,22 @@ $('.modal__close').on('click', function(){
       }]
     },
     options: {
-        
-      scales: {
-        y: {
-        //   beginAtZero: false,
-          ticks: {
-            stepSize: 500,
-            // min: 15000,
-            // max: 19000
-            
-          }
+        plugins: {
+            legend: {
+                display: false // Убираем легенду
+            }
+        },
+        scales: {
+            y: {
+            //   beginAtZero: false,
+            ticks: {
+                stepSize: 500,
+                // min: 15000,
+                // max: 19000
+                
+            }
+            }
         }
-      }
     }
   });
 
