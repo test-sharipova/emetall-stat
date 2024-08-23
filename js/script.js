@@ -403,3 +403,19 @@ $('.modal__close').on('click', function(){
         }
     }
   });
+
+  //показать календарь
+
+$('.show-calend').each(function() {
+    new AirDatepicker(this, {
+        isMobile: true,
+        autoClose: true,
+        range: true,
+        multipleDatesSeparator: ' - ',
+        showOtherMonths: true,
+        dateFormat: 'dd MMM yy',
+        selectOtherMonths: true,
+        moveToOtherMonthsOnSelect: true,
+        numberOfMonths: 3
+    });
+});

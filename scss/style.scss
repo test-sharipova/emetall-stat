@@ -564,3 +564,106 @@
       }
  }
 }
+
+.air-datepicker {
+    padding: 62px;
+    border-radius: 15px;
+    background: #FFF;
+    box-shadow: 0px 12px 30px 0px rgba(0, 0, 0, 0.12);
+    color: #212529;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    &:before {
+        content: 'Выберите период';
+        font-size: 24px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 32px 62px;
+        font-weight: 600;
+    }
+    &-nav {
+        border-bottom: none;
+        margin-top: 24px;
+        &--title {
+            font-size: 16px;
+            font-weight: 600;
+            i {
+                color: #212529;
+            }
+        }
+    }
+    &-body {
+        &--day-name {
+            font-size: 13px;
+            color: #9295AE;
+        }
+        &--cells {
+            row-gap: 16px;
+        }
+        
+           
+        
+    }
+    &-cell {
+        font-size: 14px;
+        &:nth-child(7n + 1) {
+            border-radius: 30px 0px 0px 30px;
+        }
+        &:nth-child(7n) {
+            border-radius: 0 30px 30px 0;
+        }
+        &:hover {
+            background: #2764e0;
+            border-radius: 30px;
+            color: #fff;
+           border: none;
+        }
+        &:active {
+            background: #2764e0;
+            border-radius: 30px;
+            color: #fff;
+        }
+        
+    }
+    
+}
+// .air-datepicker-body--cells.-days-, .air-datepicker-body--day-names {
+//     grid-template-columns: repeat(7, 32px);
+// }
+.air-datepicker-cell.-selected- {
+    background: #2764e0;
+    border-radius: 30px;
+    &:hover {
+        background: #2764e0;
+        border-radius: 30px;
+        color: #fff;
+       
+    }
+    &:focus {
+        background: #2764e0;
+    }
+    
+}
+.air-datepicker-cell.-selected-.-focus- {
+    background: #2764e0;
+}
+.air-datepicker-cell.-range-to- {
+    background: #2764e0;
+}
+
+.air-datepicker-cell.-in-range- {
+    background: #E9F0FC;
+    &:hover {
+        background: #2764e0;
+        border-radius: 30px;
+        color: #fff;
+        
+    }
+}
+.air-datepicker-cell.-current- {
+    color: #2764e0;
+}
+.air-datepicker-cell.-selected-.-current- {
+    background: #2764e0;
+}
+
