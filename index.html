@@ -468,7 +468,7 @@
                     <h2 class="stat-prov__title">
                         Наличие по городам
                     </h2>
-                    <div class="wrapper_start mb_40 profile__choise">
+                    <div class="wrapper_start profile__choise">
                         <div class="radio__tabs">
                             <label>
                                 <input type="radio" name="period">
@@ -728,13 +728,62 @@
                 </div>
             </div>
         </section>
-        <section class="stat-prov">
+        <section class="stat-prov" style="padding-bottom: 100px;">
             <div class="container_1208">
                 <div class="stat-prov__wrap">
                     <h2 class="stat-prov__title">
                         Рейтинг популярности продукции
                     </h2>
-                    <div class="wrapper_start profile__choise">
+                    
+                    <div class="stat-prov__grid">   
+                        <select name="chapter" id="chapter" class="form__input select_main">
+                                <option value="Рейтинг марок стали" selected disabled>Рейтинг марок стали</option>
+                                <option value="Арматура">Арматура</option>
+                                <option value="Балка">Балка</option>
+                                <option value="Баллоны">Баллоны</option>
+                                <option value="Дробь">Дробь</option>
+                                <option value="Заглушки">Заглушки</option>
+                                <option value="Задвижки">Задвижки</option>
+                                <option value="Катанка">Катанка</option>
+                                <option value="Квадрат">Квадрат</option>
+                                <option value="Краны шаровые">Краны шаровые</option>
+                                <option value="Круг">Круг</option>
+                                <option value="Лента и штрипс">Лента и штрипс</option>
+                                <option value="Лист">Лист</option>
+                                <option value="Металло-черепица">Металло-черепица</option>
+                                <option value="Отводы">Отводы</option>
+                                <option value="Переходы">Переходы</option>
+                                <option value="Поковка">Поковка</option>
+                                <option value="Полоса">Полоса</option>
+                                <option value="Проволока">Проволока</option>
+                                <option value="Профнастил">Профнастил</option>
+                                <option value="Рельсы">Рельсы</option>
+                                <option value="Рулоны">Рулоны</option>
+                                <option value="Сетка">Сетка</option>
+                                <option value="Слитки">Слитки</option>
+                                <option value="Сэндвич-панели">Сэндвич-панели</option>
+                                <option value="Тройники">Тройники</option>
+                                <option value="Труба">Труба</option>
+                                <option value="Уголок">Уголок</option>
+                                <option value="Фланцы">Фланцы</option>
+                                <option value="Чушки">Чушки</option>
+                                <option value="Швеллер">Швеллер</option>
+                                <option value="Шестигранник">Шестигранник</option>
+                                <option value="Шина">Шина</option>
+                                <option value="Электроды">Электроды</option>
+    
+                        </select>
+                       
+                        
+                        <select name="chapter" id="chapter" class="form__input select_main">
+                                <option value="Челябинск" selected>Челябинск</option>
+                                <option value="Москва">Москва</option>
+                                <option value="Санкт-Петербург">Санкт-Петербург</option>
+                               
+    
+                        </select>
+                       
+                    
                         <div class="radio__tabs">
                             <label>
                                 <input type="radio" name="period">
@@ -763,11 +812,14 @@
                             
                         </div>
                        
-                        <label class="search__calend__wrap">
-                            <input type="text" class="form__input search__calend textColor show-calend" id="calend6" value="1 авг 2023 – 1 янв 2024" readonly="true">
-                        </label>
-                        <a href="#" class="btn btn_black">Показать</a>
-                    </div>
+                        <div style="display: flex;">
+                            <label class="search__calend__wrap">
+                                <input type="text" class="form__input search__calend textColor show-calend" id="calend6" value="1 авг 2023 – 1 янв 2024" readonly="true">
+                            </label>
+                            <a href="#" class="btn btn_black">Показать</a>
+                        </div>
+                    </div> 
+                    
                     <div class="stat-chart__wrapper">
                         <div class="stat-chart__wrap">
                             <div class="stat-prov__chart stat-prov__chart-circle">

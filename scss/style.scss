@@ -397,6 +397,31 @@
         &__chart {
             padding: 48px;
         }
+        &__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            padding: 24px 48px 4px;
+            max-width: 920px;
+            .radio__tabs {
+                margin-right: 0;
+            }
+            .new-select {
+                background-color: #fff;
+                border-color: #ddd;
+            }
+            .stat-place{
+                &:nth-of-type(2) {
+                    .new-select {
+                        text-align: center;
+                        background-image: url(../img/stat-place.svg), url(https://e-metall.ru/wp-content/themes/emetall/img/form_arrow.svg);
+                        background-position: left 15px center, right 15px center;
+                        padding-left: 30px;
+                        padding-right: 30px;
+                    }
+                }
+            }
+        }
     }
     &-map {
         &__legend {
@@ -463,6 +488,8 @@
         }
         &__wrapper {
             display: flex;
+            max-width: 920px;
+            padding-bottom: 54px;
 
         }
 
@@ -480,15 +507,15 @@
                     text-align: center;
                 }
                 &__legend {
-                    flex-grow: .5;
-                    margin-top: 60px;
+                    flex-grow: .8;
+                    margin-top: 54px;
                     &__item {
                         align-items: center;
                         display: grid;
                         grid-template-columns: 3% 66% 21% 1fr;
                         gap: 8px;
                         border-radius: 30px;
-                        padding: 5px 11px;
+                        padding: 7px 11px 8px;
                         transition: background-color .2s;
                         &:hover {
                             background-color: #f2f2f4;
@@ -522,6 +549,7 @@
             }
         }
     }
+    
  .footer {
     &__logos {
         margin-bottom: 0;
@@ -627,9 +655,7 @@
     }
     
 }
-// .air-datepicker-body--cells.-days-, .air-datepicker-body--day-names {
-//     grid-template-columns: repeat(7, 32px);
-// }
+
 .air-datepicker-cell.-selected- {
     background: #2764e0;
     border-radius: 30px;

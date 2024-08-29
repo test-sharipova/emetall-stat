@@ -419,3 +419,8 @@ $('.show-calend').each(function() {
         numberOfMonths: 3
     });
 });
+
+//добавить иконку места для выбора города
+$(document).ready(function() {
+    $('.stat-prov__grid .select').addClass('stat-place');
+ });
